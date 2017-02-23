@@ -4,4 +4,4 @@ ENV LD_LIBRARY_PATH /opt/rh/rh-nodejs4/root/usr/lib64
 RUN npm install -g mountebank
 COPY imposterRequest.sh /opt/app-root/src/
 EXPOSE 2525
-CMD ['mb']
+CMD ['/opt/app-root/src/.npm-global/bin/mb']
