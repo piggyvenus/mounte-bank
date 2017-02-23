@@ -3,7 +3,7 @@ ENV PATH /opt/rh/rh-nodejs4/root/usr/bin:/opt/app-root/src/node_modules/.bin/:/o
 ENV LD_LIBRARY_PATH /opt/rh/rh-nodejs4/root/usr/lib64
 RUN npm install -g mountebank
 COPY imposterRequest.sh /opt/app-root/src/
-RUN chmod +x /opt/app-root/src/imposterRequest.sh
+RUN chmod 755 /opt/app-root/src/imposterRequest.sh
 EXPOSE 2525
 
 CMD ["mb"]
