@@ -5,4 +5,4 @@ RUN npm install -g mountebank
 COPY imposterRequest.sh /opt/app-root/src/
 EXPOSE 2525
 
-CMD ['mb']
+ENTRYPOINT ['/opt/app-root/src/.npm-global/bin/mb']
